@@ -1,4 +1,10 @@
-import { CenteredDiv, Input, TextBox } from "../../1-helpers/content";
+import {
+  CenteredDiv,
+  FormWrapper,
+  Input,
+  TextBox,
+  TextInput,
+} from "../../1-helpers/content";
 import React, { Component, useState } from "react";
 
 import { ColoredButton } from "../../1-helpers/buttons";
@@ -61,21 +67,5 @@ const GreetingBox = styled(TextBox)`
 `;
 
 const InstructionText = styled(TextBox)``;
-
-const FormWrapper = styled.form`
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  width: 100%;
-`;
-
-const TextInput = styled(Input)`
-  margin: 0 auto;
-  padding: 8px 12px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  font-size: 20px;
-`;
 
 // const;

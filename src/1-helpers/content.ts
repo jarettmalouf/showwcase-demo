@@ -33,6 +33,15 @@ export const Input = styled.input`
   color: black;
 `;
 
+export const TextInput = styled(Input)`
+  margin: 0 auto;
+  padding: 8px 12px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-size: 20px;
+`;
+
 export const CenteredDiv = styled.div`
   display: flex;
   justify-content: center;
@@ -44,6 +53,13 @@ export const TextBox = styled.div`
   display: flex;
   // background: grey;
   height: 30px;
-  max-width: 800px;
+  max-width: 1000px;
   font-size: 20px;
+`;
+
+export const FormWrapper = styled.form`
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
 `;
