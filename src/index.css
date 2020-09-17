@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: "Rajdhani", "Rambla", "Architects Daughter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --purple: #010a1f;
+  --red: #d33b5c;
+  --dark-blue: #3258f7;
+  --light-blue: #7ad8ed;
+  --pink: #ee1aef;
+  --light-grey: #d3d3d3;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
