@@ -63,7 +63,7 @@ const Content = styled.div`
 
 export const ModalContent = styled.div`
   padding: 36px;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--dark-grey);
   border-radius: 24px;
   font-size: 24px;
   color: white;

@@ -14,7 +14,9 @@ export default function Picker({
   return (
     <SelectionInput
       name={String(value)}
-      onChange={(e) => onChange(e.target.value)}
+      onChange={(e) => {
+        onChange(e.target.value);
+      }}
       value={value}
       placeholder={String(value)}
     >

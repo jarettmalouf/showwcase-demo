@@ -1,15 +1,24 @@
 import "./App.css";
 
+import { applyMiddleware, createStore } from "redux";
+
+import { Provider } from "react-redux";
 import React from "react";
 import Root from "./0-modules/Root/index";
 import logo from "./logo.svg";
+import rootReducer from "./0-modules/Root/ducks/reducer";
 import styled from "@emotion/styled";
+import thunk from "redux-thunk";
+
+export const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default function App() {
   return (
-    <Container>
-      <Root />
-    </Container>
+    <Provider store={store}>
+      <Container>
+        <Root />
+      </Container>
+    </Provider>
   );
 }
 

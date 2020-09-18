@@ -1,9 +1,7 @@
-import React, { Component, useState } from "react";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import React, { useState } from "react";
 
 import Home from "../Home";
 import Main from "../Main";
-import NewEducationModal from "../NewEducationModal";
 import styled from "@emotion/styled";
 
 export default function Root() {
@@ -12,11 +10,4 @@ export default function Root() {
   //   return <Home setSubmitted={setSubmitted} />;
   // }
   return <Main />;
-
-  /* <Router>
-        <Switch>
-          <Route path="/home" component={Home} />
-          <Route path="/home" component={Home} />
-        </Switch>
-      </Router> */
 }

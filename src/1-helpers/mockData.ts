@@ -18,4 +18,5 @@ const example2: Education = {
   description: "• Hello \n • Hi \n • Yo",
 };
 
-export const exampleProfile = [example, example2];
+// export const exampleProfile = [example, example2];
+export const exampleProfile = [];

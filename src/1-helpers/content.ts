@@ -38,14 +38,12 @@ export const TextInput = styled(Input)`
   box-sizing: border-box;
   margin-bottom: 20px;
   font-size: 20px;
-  color: white;
 `;
 
 export const SectionContainer = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
-  background: yellow;
   max-height: 400px;
   padding: 50px;
   > div {
@@ -76,6 +74,21 @@ export const EntryBox = styled(TextBox)`
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+`;
+
+export const ButtonsWrapper = styled.div`
+  margin: 24px 0 12px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > * {
+    margin: 2px;
+    max-width: calc(33.33% - 4px);
+    @media (max-width: 1200px) {
+      width: calc(50% - 4px);
+    }
+  }
 `;
 
 export const EntriesWrapper = styled.div`

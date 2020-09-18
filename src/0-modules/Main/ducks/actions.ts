@@ -8,21 +8,24 @@ import {
   UPDATED_ENTRIES,
   UPDATED_ENTRY,
 } from "./types";
+import { Degrees, Months } from "../../../1-helpers/constants";
 import {
   Education,
   NormalAction,
   ProfileState,
 } from "../../../1-helpers/interfaces";
 
+import { getYears } from "../../../1-helpers/functions";
+
 export function doSubmitEntry(entry: Education): NormalAction {
   return { type: SUBMITTED_NEW_ENTRY, payload: { entry } };
 }
 
-export function doUpdatePost(entry: Education): NormalAction {
+export function doUpdateEntry(entry: Education): NormalAction {
   return { type: UPDATED_ENTRY, payload: { entry } };
 }
 
-export function doDeletePost(entry: Education): NormalAction {
+export function doDeleteEntry(entry: Education): NormalAction {
   return { type: DELETED_ENTRY, payload: { entry } };
 }
 
@@ -54,11 +57,12 @@ export function updateEntries(
 }
 
 export function getNewEntry(): Education {
+  const Years = getYears();
   return {
-    degree: "",
+    degree: Degrees[0],
     major: "",
-    startDate: { month: "", year: "" },
-    endDate: { month: "", year: "" },
+    startDate: { month: Months[0], year: Years[0] },
+    endDate: { month: Months[0], year: Years[0] },
     institution: "",
     description: "",
   };

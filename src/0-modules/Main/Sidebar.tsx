@@ -18,9 +18,11 @@ export default function Sidebar({
   return (
     <Container>
       <EntriesWrapper>
-        {educationProfile.map((edu) => (
-          <EducationTitle>{edu.institution}</EducationTitle>
-        ))}
+        <Header>Sidebar</Header>
+        {educationProfile.length > 0 &&
+          educationProfile.map((entry) => (
+            <EducationTitle>{entry.institution}</EducationTitle>
+          ))}
       </EntriesWrapper>
     </Container>
   );
@@ -34,4 +36,8 @@ const EducationTitle = styled(EntryBox)`
   max-width: 300px;
   height: auto;
   font-size: 16px;
+`;
+
+const Header = styled.h3`
+  min-width: 150px;
 `;
