@@ -6,8 +6,8 @@ import styled from "@emotion/styled";
 
 export default function Root() {
   const [submitted, setSubmitted] = useState(false);
-  // if (!submitted) {
-  //   return <Home setSubmitted={setSubmitted} />;
-  // }
+  if (!submitted) {
+    return <Home setSubmitted={setSubmitted} />;
+  }
   return <Main />;
 }

@@ -7,12 +7,14 @@ import {
   SUBMITTED_NEW_ENTRY,
   UPDATED_ENTRIES,
   UPDATED_ENTRY,
+  UPDATE_NAME,
 } from "./types";
 import { NormalAction, ProfileState } from "../../../1-helpers/interfaces";
 
 import { updateEntries } from "./actions";
 
 const initialState: ProfileState = {
+  name: "",
   entries: [],
   entryBeingEdited: null,
   isEditing: false,
@@ -25,6 +27,8 @@ export default function entryReducer(
 ) {
   const { type, payload } = action;
   switch (type) {
+    case UPDATE_NAME:
+      return { ...state, name: payload.name };
     case UPDATED_ENTRIES:
       return { ...state, entries: payload.entries };
     case SUBMITTED_NEW_ENTRY:

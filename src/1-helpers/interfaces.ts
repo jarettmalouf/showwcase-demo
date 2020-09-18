@@ -3,6 +3,7 @@ import { RootStateOrAny } from "react-redux";
 import { ThunkAction } from "redux-thunk";
 
 export interface ProfileState {
+  name: string;
   entries: Education[];
   entryBeingEdited: Education | null;
   isEditing: boolean;

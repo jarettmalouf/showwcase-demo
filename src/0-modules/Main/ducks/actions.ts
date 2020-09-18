@@ -7,6 +7,7 @@ import {
   SUBMITTED_NEW_ENTRY,
   UPDATED_ENTRIES,
   UPDATED_ENTRY,
+  UPDATE_NAME as UPDATED_NAME,
 } from "./types";
 import { Degrees, Months } from "../../../1-helpers/constants";
 import {
@@ -43,6 +44,10 @@ export function doCancelEditing(entry: Education): NormalAction {
 
 export function doCancelCreating(): NormalAction {
   return { type: CANCELED_CREATING, payload: {} };
+}
+
+export function doUpdateName(name: string): NormalAction {
+  return { type: UPDATED_NAME, payload: { name } };
 }
 
 export function updateEntries(

@@ -8,10 +8,13 @@ import {
 import React, { Component, useState } from "react";
 
 import { ColoredButton } from "../../1-helpers/buttons";
+import { doUpdateName } from "../Main/ducks/actions";
 import styled from "@emotion/styled";
+import { useDispatch } from "react-redux";
 
 export default function Home({ setSubmitted }: { setSubmitted: Function }) {
   const [name, setName] = useState("");
+  const dispatch = useDispatch();
 
   return (
     <Container>
@@ -43,7 +46,7 @@ export default function Home({ setSubmitted }: { setSubmitted: Function }) {
       return;
     }
     setName("");
-    // submitNewProfile({name});
+    dispatch(doUpdateName(name));
     setSubmitted(true);
   }
 }

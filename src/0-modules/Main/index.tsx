@@ -17,11 +17,12 @@ import { exampleProfile } from "../../1-helpers/mockData";
 import styled from "@emotion/styled";
 
 export default function Main() {
+  const name = useSelector((state: RootStateOrAny) => state.entries.name);
   const entries = useSelector((state: RootStateOrAny) => state.entries.entries);
   return (
     <>
       <Container>
-        <WelcomeText>Welcome to your education page</WelcomeText>
+        <WelcomeText>Welcome to {name}'s education page</WelcomeText>
         <AddNewEducationButton />
         <Body>
           <Sidebar educationProfile={entries} />
