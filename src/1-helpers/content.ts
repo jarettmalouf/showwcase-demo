@@ -17,12 +17,10 @@ export const StandardBox = styled.div`
 `;
 
 export const Input = styled.input`
-  display: block;
   outline: none;
   padding: 12px 12px;
   background: var(--black);
   color: var(--blue);
-  font-family: var(--fonts);
   font-weight: bold;
   font-size: 24px;
   margin: 0;
@@ -40,6 +38,19 @@ export const TextInput = styled(Input)`
   box-sizing: border-box;
   margin-bottom: 20px;
   font-size: 20px;
+  color: white;
+`;
+
+export const SectionContainer = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background: yellow;
+  max-height: 400px;
+  padding: 50px;
+  > div {
+    margin-top: 10px;
+  }
 `;
 
 export const CenteredDiv = styled.div`
@@ -57,9 +68,47 @@ export const TextBox = styled.div`
   font-size: 20px;
 `;
 
+export const EntryBox = styled(TextBox)`
+  background: grey;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const EntriesWrapper = styled.div`
+  padding: 10px;
+  background: #00ccff;
+  border-radius: 10px;
+  overflow: scroll;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  > div:not(:first-child) {
+    margin-top: 10px;
+  }
+`;
+
 export const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   max-width: 400px;
   width: 100%;
+`;
+
+export const SpacedColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  > * {
+    margin: 10px;
+  }
+`;
+
+export const SpacedRow = styled.div`
+  display: flex;
+  > * {
+    margin: 2px 10px;
+  }
 `;

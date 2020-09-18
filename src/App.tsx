@@ -1,7 +1,7 @@
 import "./App.css";
 
 import React from "react";
-import Root from "./0-modules/Root";
+import Root from "./0-modules/Root/index";
 import logo from "./logo.svg";
 import styled from "@emotion/styled";
 

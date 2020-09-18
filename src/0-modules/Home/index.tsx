@@ -27,6 +27,7 @@ export default function Home({ setSubmitted }: { setSubmitted: Function }) {
             value={name}
             type="text"
             placeholder="Enter name here"
+            autoComplete="none"
           />
         </FormWrapper>
         <ColoredButton color="var(--dark-blue)" onClick={handleSubmit}>

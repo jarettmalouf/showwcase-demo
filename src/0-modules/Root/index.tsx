@@ -1,8 +1,9 @@
 import React, { Component, useState } from "react";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
-import Home from "./Home";
-import Main from "./Main";
+import Home from "../Home";
+import Main from "../Main";
+import NewEducationModal from "../NewEducationModal";
 import styled from "@emotion/styled";
 
 export default function Root() {
