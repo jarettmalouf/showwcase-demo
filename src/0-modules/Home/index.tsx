@@ -71,5 +71,3 @@ const GreetingBox = styled(TextBox)`
 `;
 
 const InstructionText = styled(TextBox)``;
-
-// const;

@@ -183,7 +183,6 @@ export default function NewEducationModal() {
       return;
     }
     if (isCreating) {
-      console.log("isCreating");
       dispatch(doSubmitEntry(entry));
     } else if (isEditing) {
       dispatch(doUpdateEntry(entry));
