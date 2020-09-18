@@ -7,17 +7,25 @@ import NewEducationModal from "../NewEducationModal";
 import styled from "@emotion/styled";
 
 export function Entry({ education }: { education: Education }) {
+  const {
+    degree,
+    major,
+    institution,
+    startDate,
+    endDate,
+    description,
+  } = education;
+
   return (
     <EducationEntry>
-      <Title>{education.institution}</Title>
+      <Title>{institution}</Title>
       <Date>
-        {education.startDate.month} {education.startDate.year} –{" "}
-        {education.endDate.month} {education.endDate.year}
+        {startDate.month} {startDate.year} – {endDate.month} {endDate.year}
       </Date>
       <DegreeInfo>
-        {education.degree}, {education.major}
+        {degree}, {major}
       </DegreeInfo>
-      <Details>{education.description}</Details>
+      <Details>{description}</Details>
     </EducationEntry>
   );
 }
