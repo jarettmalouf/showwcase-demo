@@ -35,8 +35,8 @@ export function Entry({
       <Details>{description}</Details>
 
       {/* <EditButton onClick={onEdit} color="green">
-          e
-        </EditButton> */}
+        e
+      </EditButton> */}
       <DeleteButton onClick={onDelete}>Delete</DeleteButton>
     </EducationEntry>
   );

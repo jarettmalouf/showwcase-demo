@@ -32,9 +32,9 @@ export default function NewEducationModal() {
   );
 
   const initialEntry = getNewEntry();
-  // if (entryBeingEdited) {
-  //   Object.assign(initialEntry, entryBeingEdited);
-  // }
+  if (entryBeingEdited) {
+    Object.assign(initialEntry, entryBeingEdited);
+  }
 
   const [degree, setDegree] = useState(initialEntry.degree);
   const [major, setMajor] = useState(initialEntry.major);
@@ -74,12 +74,15 @@ export default function NewEducationModal() {
               <Caption>Institution</Caption>
               <ModalInput
                 name="institution"
-                onChange={(e) => setInstitution(e.target.value)}
+                onChange={(e) => {
+                  setInstitution(e.target.value);
+                }}
                 value={institution}
                 type="text"
                 placeholder="Institution"
                 autoComplete="none"
               />
+              {/* <DisplayAutoComplete options={getOptions()} /> */}
             </EducationDetail>
             <EducationDetail>
               <Caption>Degree</Caption>
@@ -176,9 +179,9 @@ export default function NewEducationModal() {
       description,
     };
 
-    // if (anyFieldIsEmpty()) {
-    //   return;
-    // }
+    if (anyFieldIsEmpty()) {
+      return;
+    }
     if (isCreating) {
       console.log("isCreating");
       dispatch(doSubmitEntry(entry));
@@ -219,7 +222,19 @@ export default function NewEducationModal() {
     const res = await axios.get(
       "http://universities.hipolabs.com/search?name=" + institution
     );
-    console.log(res.data);
+    return res.data.splice(0, 3);
+  }
+
+  function DisplayAutoComplete({ options }: { options: string[] }) {
+    return (
+      <SpacedColumn>
+        {options.map((option: any) => (
+          <div style={{ background: "yellow", height: 20, width: 100 }}>
+            {option.name}
+          </div>
+        ))}
+      </SpacedColumn>
+    );
   }
 }
 
